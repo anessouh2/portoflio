@@ -1,0 +1,119 @@
+.second-page{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+    
+    
+    
+
+.text{
+    position: relative;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+    height:60vh;
+    
+    
+}
+.about{
+    color:#AC9B8F;
+    font-size: 90px;
+    font-family: 'Impact';
+    letter-spacing: 3px;
+    margin-left: 100px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.who{
+    font-family: 'Instrument Sans';
+    color:white;
+    font-size: 60px;
+    margin-top: 0;
+    position: absolute;
+    left:40%;
+    display: block;
+}
+.text h4{
+    color: white;
+    font-family:'Instrument Sans' ;
+    font-size: 20px;
+    position: absolute;
+    left:20%;
+    top:37%;
+}
+.line{
+    background-color: #AC9B8F;
+    position: absolute;
+    left: 50%;
+    top:38%;
+    width: 5px;
+    height: 60px;
+    margin-top: 12px;
+}
+.text p{
+    color: #C6B4A6;
+    font-family: 'Instrument Sans';
+    
+}
+
+.all-paragraphes{
+    position:absolute;
+    top:37%;
+    left:55%;
+    width: 45%;
+
+}
+.inofrmations{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    margin-left: 100px;
+    margin-top: 0;
+}
+.tri2{
+    background-color: #C6B4A6;
+    width: 70%;
+    height: 3px;
+    margin-left: 130px;
+    margin-top: 90px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px){
+    .about{ font-size: 72px; margin-left: 60px; }
+    .who{ font-size: 46px; left: 38%; }
+    .text h4{ left: 18%; }
+    .line{ left: 48%; }
+    .all-paragraphes{ left: 52%; width: 46%; }
+}
+
+@media (max-width: 992px){
+    .about{ font-size: 60px; margin-left: 40px; }
+    .who{ font-size: 40px; left: 35%; }
+    .text{ height: 70vh; }
+    .text h4{ font-size: 18px; left: 12%; top: 34%; }
+    .line{ left: 42%; top: 36%; height: 50px; }
+    .all-paragraphes{ left: 46%; width: 50%; }
+    .inofrmations{ grid-template-columns: 1fr 1fr; margin-left: 40px; }
+}
+
+@media (max-width: 768px){
+    .text{ height: auto; padding-bottom: 40px; }
+    .about{ font-size: 48px; margin-left: 24px; }
+    .who{ position: static; display: block; font-size: 32px; margin: 8px 24px; }
+    .text h4{ position: static; font-size: 16px; margin: 8px 24px; }
+    .line{ display: none; }
+    .all-paragraphes{ position: static; width: auto; margin: 16px 24px; }
+    .inofrmations{ grid-template-columns: 1fr; margin-left: 24px; margin-left:50px ;}
+}
+
+@media (max-width: 480px){
+    .about{ font-size: 40px; margin-left: 16px; }
+    .who{ font-size: 28px; margin: 8px 16px; }
+    .text h4{ font-size: 15px; margin: 8px 16px; }
+    .all-paragraphes{ margin: 12px 16px; }
+    .tri2{margin-left:50px ;}
+}

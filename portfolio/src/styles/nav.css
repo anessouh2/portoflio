@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=League+Gothic&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    color: #0000;
+    width: 100vw;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Instrument Sans';
+    font-weight: bold;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    transition: 0.2s ease;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .links {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: rgba(142, 132, 117, 0.95);
+        backdrop-filter: blur(20px);
+        transition: left 0.3s ease;
+        padding: 60px 20px 20px;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    
+    .links.active {
+        left: 0;
+    }
+    
+    .links a {
+        font-size: 18px;
+        padding: 15px 20px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none;
+    }
+    
+    .overlay.active {
+        display: block;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .links {
+        padding: 15px 30px;
+    }
+    
+    .links a {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .links {
+        padding: 20px 60px;
+    }
+    
+    .links a {
+        font-size: 18px;
+        padding: 15px 25px;
+    }
+}

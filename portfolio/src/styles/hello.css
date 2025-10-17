@@ -1,0 +1,125 @@
+.welcom{ 
+    position:absolute;
+    width: 100vw;
+}
+.hello , .im , .anes{
+    color:#3A342A;
+    font-family: 'Impact';
+    letter-spacing: 5px;
+    text-align: center;   
+    margin: 0;             
+    font-size: 15rem;       
+    line-height: 1;    
+      
+}
+.hello{
+    margin-top: 70px;
+}
+.im{
+    text-align: left;
+    margin-left: 130px;
+    display: inline-block; 
+    width: 30%; 
+    height: 30%;
+    font-size :17rem;
+
+}
+.anes{
+    color: #FFFFFF;
+    display: inline-block;
+    margin-right: 150px;
+    width: 30%; 
+    height: 30%;
+    font-size :17rem;
+    
+
+}
+.span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.name-img{
+    width: 25%;
+    height: auto;
+}
+.HELLO{
+  padding-right:30px;
+} 
+  
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .hello , .im , .anes{
+        font-size: 12rem;
+        letter-spacing: 4px;
+    }
+    .im, .anes{
+        width: 40%;
+    }
+    .name-img{
+        width: 30%;
+    }
+}
+
+@media (max-width: 992px) {
+    .hello , .im , .anes{
+        font-size: 9rem;
+        letter-spacing: 3px;
+    }
+    .span{
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .im{
+        margin-left: 60px;
+        width: 45%;
+    }
+    .anes{
+        margin-right: 60px;
+        width: 45%;
+    }
+    .name-img{
+        width: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hello{
+        margin-top: 40px;
+    }
+    .hello , .im , .anes{
+        font-size: 6rem;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    .span{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .im, .anes{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        height: auto;
+    }
+    .name-img{
+        width: 55%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hello , .im , .anes{
+        font-size: 4rem;
+        letter-spacing: 1px;
+    }
+    .HELLO{
+        padding-right: 16px;
+    }
+    .name-img{
+        width: 70%;
+    }
+}

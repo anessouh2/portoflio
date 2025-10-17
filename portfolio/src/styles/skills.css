@@ -1,0 +1,107 @@
+.line1{
+    background-color: #C6B4A6 ;
+    width:2px ;
+    height: 70vh ;
+    margin-left: 50px;
+}
+.line2  {
+    background-color: #C6B4A6;
+    width: 3%;
+    height: 1px;
+}
+.line3{
+    background-color: #C6B4A6;
+    width: 3%;
+    height: 1px;
+    margin-left: 20px;
+}
+.conta{
+        background-color: rgba(198,180,166,0.45);
+        display: flex;
+        border-radius: 10px;
+        margin-left: 30px;
+        font-family: 'Instrument Sans';
+        width: 36%;
+        flex-direction: row;
+       
+}
+.left-one{
+    display: flex;
+    
+}
+.conta h1{
+    color:white;
+    padding-left: 20px;
+}
+
+/* Creative enhancements */
+.conta{
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(198,180,166,0.35);
+        box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* animated highlight bar across the top */
+.conta::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 3px;
+        width: 0;
+        background: linear-gradient(90deg, #C6B4A6 0%, rgba(255,255,255,0.6) 100%);
+        transition: width 0.6s ease;
+}
+
+/* subtle diagonal shimmer on hover */
+.conta::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.12) 20%, transparent 40%);
+        background-size: 200% 100%;
+        opacity: 0;
+        transition: opacity 0.4s ease, background-position 0.8s ease;
+        pointer-events: none;
+}
+
+.conta:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 14px 28px rgba(0,0,0,0.14);
+}
+
+.conta:hover::before{ width: 100%; }
+.conta:hover::after{ opacity: 1; background-position: -100% 0; }
+
+/* skill tag chips if present inside .conta */
+.conta .chip{
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.15);
+        color: #fff;
+        font-size: 12px;
+        margin: 4px 6px 0 0;
+        border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* responsive tweaks */
+@media (max-width: 1200px){
+    .conta{ width: 46%; }
+}
+
+@media (max-width: 992px){
+    .conta{ width: 60%; margin-left: 24px; }
+}
+
+@media (max-width: 768px){
+    .conta{ width: 88%; margin-left: auto; margin-right: auto; }
+    .line1{ height: 40vh; margin-left: 24px; }
+}
+
+@media (max-width: 480px){
+    .conta{ width: 94%; }
+    .conta h1{ font-size: 1.1rem; }
+}

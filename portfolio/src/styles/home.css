@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=League+Gothic&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0;
+    min-height: 100vh;
+
+}
+.first-page{
+    width: 100vw;
+    position: relative;
+    margin-right: 0;
+    background-color: #8E8475;
+    margin-top: 0;
+    overflow-x: hidden;
+    margin: auto;
+}
+.my-img{
+    width: 50%;
+    position: relative;
+    left: 20%;
+    display: inline;
+    
+}
+.first-par{
+    font-family: 'Instrument Sans';
+    color:black;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    width: 24%;
+    height: 11%;
+    display: flex;
+    background-color: rgba(174, 146, 125 ,65%);
+    border-radius: 30px;
+    display: inline-block;
+    position: absolute;
+    left: 10%;
+    top:54%;
+    
+}
+.second-par{
+    font-family: 'Instrument Sans';
+    color:black;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: end;
+    text-align: start;
+    width: 40%;
+    padding: 15px;
+    background-color: rgba(174, 146, 125 ,65%);
+    border-radius:60px;
+    height: 20%;
+    margin-top: 30px;
+    display: inline-block;
+    position: absolute;
+    right:0;
+    top :70%;
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px){
+    .my-img{ width: 55%; left: 18%; }
+    .first-par{ font-size: 26px; width: 30%; }
+    .second-par{ font-size: 26px; width: 50%; }
+}
+
+@media (max-width: 992px){
+    .my-img{ width: 70%; left: 15%; }
+    .first-par{ font-size: 22px; width: 40%; top: 52%; }
+    .second-par{ font-size: 22px; width: 60%; top: 68%; }
+}
+
+@media (max-width: 768px){
+    .first-page{ padding-bottom: 80px; }
+    .my-img{ width: 90%; left: 5%; }
+    .first-par{
+        font-size: 20px;
+        width: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    .second-par{
+        font-size: 20px;
+        width: 85%;
+        right: 50%;
+        transform: translateX(50%);
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px){
+    .first-par{ font-size: 18px; width: 85%; border-radius: 20px; }
+    .second-par{ font-size: 18px; width: 90%; border-radius: 30px; }
+}
