@@ -1,125 +1,109 @@
 .welcom{ 
-    position:absolute;
-    width: 100vw;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+
+.hello {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
 .hello , .im , .anes{
-    color:#3A342A;
+    color: #2A2520;
     font-family: 'Impact';
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     text-align: center;   
     margin: 0;             
-    font-size: 15rem;       
-    line-height: 1;    
-      
+    font-size: clamp(4rem, 12vw, 10rem);       
+    line-height: 1.1;    
+    font-weight: 200;
 }
-.hello{
-    margin-top: 70px;
-}
-.im{
-    text-align: left;
-    margin-left: 130px;
-    display: inline-block; 
-    width: 30%; 
-    height: 30%;
-    font-size :17rem;
 
+.im {
+    text-align: center;
+    display: block;
+    margin: 0;
+    font-size: clamp(4rem, 12vw, 10rem);
 }
-.anes{
+
+.anes {
     color: #FFFFFF;
-    display: inline-block;
-    margin-right: 150px;
-    width: 30%; 
-    height: 30%;
-    font-size :17rem;
-    
-
+    text-align: center;
+    display: block;
+    margin: 0;
+    font-size: clamp(4rem, 12vw, 10rem);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
-.span{
+
+.span {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
-}
-.name-img{
-    width: 25%;
-    height: auto;
-}
-.HELLO{
-  padding-right:30px;
-} 
-  
-
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .hello , .im , .anes{
-        font-size: 12rem;
-        letter-spacing: 4px;
-    }
-    .im, .anes{
-        width: 40%;
-    }
-    .name-img{
-        width: 30%;
-    }
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
-@media (max-width: 992px) {
-    .hello , .im , .anes{
-        font-size: 9rem;
-        letter-spacing: 3px;
+.HELLO {
+    padding-right: 20px;
+}
+
+.world {
+    padding-left: 0;
+}
+
+/* Desktop Layout */
+@media (min-width: 992px) {
+    .welcom {
+        align-items: flex-start;
+        text-align: left;
     }
-    .span{
-        flex-wrap: wrap;
-        gap: 16px;
+
+    .hello, .im, .anes {
+        text-align: left;
     }
-    .im{
-        margin-left: 60px;
-        width: 45%;
+
+    .span {
+        justify-content: flex-start;
     }
-    .anes{
-        margin-right: 60px;
-        width: 45%;
-    }
-    .name-img{
-        width: 35%;
+
+    .HELLO {
+        padding-right: 30px;
     }
 }
 
-@media (max-width: 768px) {
-    .hello{
-        margin-top: 40px;
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hello, .im, .anes {
+        font-size: clamp(5rem, 10vw, 8rem);
     }
-    .hello , .im , .anes{
-        font-size: 6rem;
-        letter-spacing: 2px;
-        text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .hello {
+        margin-bottom: 15px;
     }
-    .span{
+
+    .span {
         flex-direction: column;
+        gap: 10px;
         align-items: center;
-        justify-content: center;
     }
-    .im, .anes{
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-        height: auto;
-    }
-    .name-img{
-        width: 55%;
+
+    .HELLO {
+        padding-right: 0;
     }
 }
 
 @media (max-width: 480px) {
-    .hello , .im , .anes{
-        font-size: 4rem;
-        letter-spacing: 1px;
-    }
-    .HELLO{
-        padding-right: 16px;
-    }
-    .name-img{
-        width: 70%;
+    .hello, .im, .anes {
+        font-size: clamp(3rem, 10vw, 5rem);
+        letter-spacing: 2px;
     }
 }

@@ -1,119 +1,219 @@
-.second-page{
-    min-height: 160vh;
-    display: flex;
-    flex-direction: column;
-}
-
-    
-    
-    
-
-.text{
+.about-section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    padding: 80px 30px;
     position: relative;
-    width: 100vw;
-    margin: 0;
     overflow: hidden;
-    height:60vh;
-    
-    
 }
-.about{
-    color:#AC9B8F;
-    font-size: 90px;
+
+.about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 80px;
+    padding-left: 30px;
+}
+
+.header-accent {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #C6B4A6 0%, rgba(198, 180, 166, 0.3) 100%);
+    border-radius: 2px;
+}
+
+.about-title {
+    color: #C6B4A6;
     font-family: 'Impact';
-    letter-spacing: 3px;
-    margin-left: 100px;
-    margin-bottom: 0;
-    margin-top: 10px;
+    font-size: clamp(40px, 6vw, 72px);
+    letter-spacing: 4px;
+    font-weight: 200;
+    margin: 0;
 }
-.who{
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+}
+
+.about-text-section {
+    padding: 0 30px;
+}
+
+.who-title {
     font-family: 'Instrument Sans';
-    color:white;
-    font-size: 60px;
-    margin-top: 0;
-    position: absolute;
-    left:40%;
-    display: block;
+    color: #fff;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    letter-spacing: 1px;
 }
-.text h4{
-    color: white;
-    font-family:'Instrument Sans' ;
-    font-size: 20px;
-    position: absolute;
-    left:20%;
-    top:37%;
+
+.name-highlight {
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(198, 180, 166, 0.3);
+    position: relative;
 }
-.line{
-    background-color: #AC9B8F;
+
+.name-highlight::after {
+    content: '';
     position: absolute;
-    left: 50%;
-    top:38%;
-    width: 5px;
-    height: 60px;
-    margin-top: 12px;
+    bottom: -2px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, #C6B4A6 0%, transparent 100%);
 }
-.text p{
+
+.name-text {
     color: #C6B4A6;
     font-family: 'Instrument Sans';
-    
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-weight: 500;
+    letter-spacing: 1.5px;
 }
 
-.all-paragraphes{
-    position:absolute;
-    top:37%;
-    left:55%;
-    width: 45%;
-
+.about-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
-.inofrmations{
+
+.description-text {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Instrument Sans';
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.8;
+    margin: 0;
+    font-weight: 300;
+}
+
+.info-cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
-    margin-left: 100px;
-    margin-top: 0;
-}
-.tri2{
-    background-color: #C6B4A6;
-    width: 70%;
-    height: 3px;
-    margin-left: 130px;
-    margin-top: 90px;
+    gap: 25px;
+    padding: 0 30px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px){
-    .about{ font-size: 72px; margin-left: 60px; }
-    .who{ font-size: 46px; left: 38%; }
-    .text h4{ left: 18%; }
-    .line{ left: 48%; }
-    .all-paragraphes{ left: 52%; width: 46%; }
+.section-divider {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #C6B4A6 20%, #C6B4A6 80%, transparent 100%);
+    margin: 80px 0 0 0;
+    opacity: 0.5;
 }
 
-@media (max-width: 992px){
-    .about{ font-size: 60px; margin-left: 40px; }
-    .who{ font-size: 40px; left: 35%; }
-    .text{ height: 70vh; }
-    .text h4{ font-size: 18px; left: 12%; top: 34%; }
-    .line{ left: 42%; top: 36%; height: 50px; }
-    .all-paragraphes{ left: 46%; width: 50%; }
-    .inofrmations{ grid-template-columns: 1fr 1fr; margin-left: 40px; }
+/* Desktop Layout */
+@media (min-width: 992px) {
+    .about-content {
+        grid-template-columns: 1.2fr 1fr;
+        gap: 80px;
+        align-items: start;
+    }
+
+    .about-text-section {
+        padding: 0;
+    }
+
+    .info-cards-grid {
+        padding: 0;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
-@media (max-width: 768px){
-    .text{ height: auto; padding-bottom: 40px; }
-    .about{ font-size: 48px; margin-left: 24px; }
-    .who{ position: static; display: block; font-size: 32px; margin: 8px 24px; }
-    .text h4{ position: static; font-size: 16px; margin: 8px 24px; }
-    .line{ display: none; }
-    .all-paragraphes{ position: static; width: auto; margin: 16px 24px; }
-    .inofrmations{ grid-template-columns: 1fr; margin-left: 24px; margin-left:50px ;}
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-section {
+        padding: 60px 30px;
+    }
+
+    .about-header {
+        margin-bottom: 60px;
+    }
+
+    .about-content {
+        gap: 50px;
+    }
+
+    .info-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
 
-@media (max-width: 480px){
-    .about{ font-size: 40px; margin-left: 16px; }
-    .who{ font-size: 28px; margin: 8px 16px; }
-    .text h4{ font-size: 15px; margin: 8px 16px; }
-    .all-paragraphes{ margin: 12px 16px; }
-    .tri2{margin-left:50px ;}
+/* Mobile */
+@media (max-width: 767px) {
+    .about-section {
+        padding: 50px 20px;
+    }
+
+    .about-header {
+        padding-left: 20px;
+        margin-bottom: 50px;
+        gap: 15px;
+    }
+
+    .header-accent {
+        width: 40px;
+        height: 2px;
+    }
+
+    .about-content {
+        gap: 40px;
+    }
+
+    .about-text-section {
+        padding: 0 20px;
+    }
+
+    .who-title {
+        margin-bottom: 15px;
+    }
+
+    .name-highlight {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+    }
+
+    .about-description {
+        gap: 15px;
+    }
+
+    .info-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .section-divider {
+        margin: 60px 0 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 40px 15px;
+    }
+
+    .about-header {
+        padding-left: 15px;
+        margin-bottom: 40px;
+    }
+
+    .about-text-section {
+        padding: 0 15px;
+    }
+
+    .info-cards-grid {
+        padding: 0 15px;
+        gap: 15px;
+    }
 }

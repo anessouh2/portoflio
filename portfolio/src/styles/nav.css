@@ -23,16 +23,34 @@ body {
 
 .links a {
     text-decoration: none;
-    color: black;
-    transition: 0.2s ease;
+    color: #2A2520;
+    font-weight: 600;
+    transition: all 0.3s ease;
     padding: 10px 15px;
     border-radius: 20px;
     font-size: 14px;
+    position: relative;
+}
+
+.links a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 2px;
+    background-color: #C6B4A6;
+    transition: transform 0.3s ease;
 }
 
 .links a:hover {
-    text-decoration: underline;
-    background-color: rgba(255, 255, 255, 0.2);
+    color: #C6B4A6;
+    background-color: rgba(198, 180, 166, 0.2);
+}
+
+.links a:hover::after {
+    transform: translateX(-50%) scaleX(1);
 }
 
 
