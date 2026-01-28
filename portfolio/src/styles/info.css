@@ -17,7 +17,36 @@
     cursor:pointer;
     transition: background-size 0.5s linear;
 }
+.card {
+    position: relative;
+    overflow: hidden;
+}
 
+/* animated color wipe using a pseudo element that scales from left to right */
+.card::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #C6B4A6 0%, #C6B4A6 100%);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.5s linear;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.95;
+}
+
+/* ensure card contents sit above the animated layer */
+.card > *{
+    position: relative;
+    z-index: 1;
+}
+
+/* trigger the left-to-right fill */
+.card:hover::after{
+    transform: scaleX(1);
+}
 .card:hover {
     /* fill the second layer from left to right */
     background-size: 100% 100%, 100% 100%;

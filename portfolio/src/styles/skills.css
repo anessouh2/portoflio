@@ -2,48 +2,54 @@
     background-color: #C6B4A6 ;
     width:2px ;
     height: 70vh ;
-    margin-left: 50px;
+    margin-left: 30px;
+    display: inline-block;
 }
 .line2  {
     background-color: #C6B4A6;
     width: 3%;
     height: 1px;
+    display: inline-block;
 }
 .line3{
     background-color: #C6B4A6;
     width: 3%;
     height: 1px;
     margin-left: 20px;
+    display: inline-block;
 }
 .conta{
         background-color: rgba(198,180,166,0.45);
-        display: flex;
         border-radius: 10px;
         margin-left: 30px;
         font-family: 'Instrument Sans';
-        width: 36%;
-        flex-direction: row;
+        width: 70%;
+         position: relative;
+        border: 1px solid rgba(198,180,166,0.35);
+        box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+       
        
 }
 .left-one{
+    width: 50vw;
     display: flex;
+    gap:20px;
     
+}
+.conta h3 {
+   color:#C6B4A6 ;
+}
+.conta h5{
+    color: white;
 }
 .conta h1{
     color:white;
     padding-left: 20px;
 }
 
-/* Creative enhancements */
-.conta{
-        position: relative;
-        overflow: hidden;
-        border: 1px solid rgba(198,180,166,0.35);
-        box-shadow: 0 8px 22px rgba(0,0,0,0.10);
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
 
-/* animated highlight bar across the top */
+
 .conta::before{
         content: "";
         position: absolute;
@@ -55,7 +61,6 @@
         transition: width 0.6s ease;
 }
 
-/* subtle diagonal shimmer on hover */
 .conta::after{
         content: "";
         position: absolute;
@@ -71,11 +76,8 @@
         transform: translateY(-3px);
         box-shadow: 0 14px 28px rgba(0,0,0,0.14);
 }
-
 .conta:hover::before{ width: 100%; }
 .conta:hover::after{ opacity: 1; background-position: -100% 0; }
-
-/* skill tag chips if present inside .conta */
 .conta .chip{
         display: inline-block;
         padding: 6px 10px;
@@ -86,8 +88,18 @@
         margin: 4px 6px 0 0;
         border: 1px solid rgba(255,255,255,0.25);
 }
-
-/* responsive tweaks */
+.simulations{
+    display: flex;
+}
+.right-one {
+  display: flex;
+  flex-direction: row;
+}
+.two-container{
+    display: flex;
+    flex-direction: row;
+    
+}
 @media (max-width: 1200px){
     .conta{ width: 46%; }
 }
